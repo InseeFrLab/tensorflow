@@ -9,6 +9,6 @@ deploy:
   provider: script
   script:
     echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    && docker push inseefrlab/tensorflow
+    && docker push inseefrlab/tensorflow:dcos
   on:
     branch: main

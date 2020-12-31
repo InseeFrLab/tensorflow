@@ -3,7 +3,7 @@ services:
 addons:
   organization: 'inseefrlab'
 script:
-  - docker build -t inseefrlab/tensorflow .
+  - docker build -t inseefrlab/tensorflow:dcos .
 deploy:
   skip_cleanup: true
   provider: script

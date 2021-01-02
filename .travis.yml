@@ -3,12 +3,12 @@ services:
 addons:
   organization: 'inseefrlab'
 script:
-  - docker build -t inseefrlab/tensorflow:dcos .
+  - docker build -t inseefrlab/tensorflow:2.4.0-gpu-jupyter .
 deploy:
   skip_cleanup: true
   provider: script
   script:
     echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    && docker push inseefrlab/tensorflow:dcos
+    && docker push inseefrlab/tensorflow:2.4.0-gpu-jupyter
   on:
     branch: main

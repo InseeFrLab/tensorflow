@@ -10,8 +10,5 @@ RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/local/bin/mc
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
     chmod +x ./kubectl && \
     mv ./kubectl /usr/local/bin/kubectl
-#RUN userdel nobody
-#RUN groupadd --gid 99 nobody
-#RUN useradd nobody --uid 99 --home /home/nobody/ --create-home --groups nobody --gid nobody --shell /bin/bash
-#RUN chown -R nobody:nobody /blazingsql
-RUN pip install s3fs hvac boto3
+
+RUN pip install s3fs hvac boto3 jupyterlab

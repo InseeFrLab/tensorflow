@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow:2.7.1-gpu-jupyter
 
 RUN apt-get update -y && \
-    apt-get install -y sudo wget jq && \
+    apt-get install -y sudo wget curl jq && \
     update-ca-certificates
 
 # Installing mc

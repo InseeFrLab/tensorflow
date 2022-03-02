@@ -20,4 +20,4 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
     chmod +x ./kubectl && \
     mv ./kubectl /usr/local/bin/kubectl
 
-RUN pip install s3fs hvac boto3 jupyterlab
+RUN pip install s3fs hvac boto3 jupyterlab tensorflow-io
